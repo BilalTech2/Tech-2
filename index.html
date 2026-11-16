@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#121a2a">
+<meta name="description" content="Life Qilla Plus Marque booking and payment management">
+<title>Life Qilla Plus Marque</title>
+<style>
+:root{--navy:#121a2a;--navy2:#1c2940;--gold:#c5a15b;--bg:#f3f5f8;--card:#fff;--ink:#182235;--muted:#6e7889;--line:#e4e8ef;--green:#16845b;--red:#bd4545;--amber:#9a6a12;--shadow:0 5px 22px #15213a0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:var(--navy);color:white;padding:15px max(18px,calc((100% - 1450px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:4;box-shadow:0 3px 15px #0002}.brand{font-weight:800;font-size:17px;letter-spacing:.2px}.brand small{display:block;color:#d7c18f;font-size:11px;font-weight:500;letter-spacing:1.4px;margin-top:2px}.top-actions{display:flex;gap:8px;align-items:center}.top-actions button{border:1px solid #566176;background:#202c41;color:white;border-radius:9px;padding:8px 11px;font-size:12px}.shell{max-width:1450px;margin:auto;display:grid;grid-template-columns:225px 1fr;min-height:calc(100vh - 65px)}aside{background:var(--navy2);padding:18px 12px}.nav{width:100%;border:0;background:transparent;color:#d5dbea;text-align:left;padding:12px 13px;border-radius:9px;margin:3px 0;font-weight:600;font-size:13px}.nav.active,.nav:hover{background:#34425a;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--gold)}main{padding:25px;min-width:0}.page{display:none}.page.active{display:block}.heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:20px}.heading h1{margin:0;font-size:25px}.heading p{margin:4px 0 0;color:var(--muted);font-size:13px}.btn{border:0;border-radius:9px;padding:10px 14px;font-weight:700;font-size:13px;background:var(--navy);color:white}.btn.gold{background:var(--gold);color:#1b1b1b}.btn.soft{background:#edf0f5;color:#29364b}.btn.red{background:#fff0f0;color:var(--red)}.btn.green{background:#e7f6ef;color:var(--green)}.btn.small{padding:7px 9px;font-size:11px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:18px}.card,.panel{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:17px;box-shadow:var(--shadow)}.metric-label{color:var(--muted);font-size:12px}.metric{font-size:25px;font-weight:800;margin-top:6px;letter-spacing:-.4px}.metric-note{font-size:11px;color:var(--muted);margin-top:2px}.panel h2{font-size:16px;margin:0 0 14px}.split{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.toolbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:15px 0}.tools{display:flex;gap:8px;flex-wrap:wrap}.search{width:min(260px,100%)}input,select,textarea{width:100%;border:1px solid #d9dfe8;border-radius:8px;padding:10px 11px;background:white;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:#b99855;box-shadow:0 0 0 3px #c5a15b20}label{display:block;font-size:12px;color:#4e5a6c;font-weight:700;margin-bottom:5px}.field{margin-bottom:13px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 13px}.full{grid-column:1/-1}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;background:white}table{border-collapse:collapse;width:100%;min-width:760px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap}th{background:#f8f9fb;color:#687386;font-size:11px;text-transform:uppercase;letter-spacing:.4px}tr:last-child td{border-bottom:0}.status{display:inline-block;border-radius:30px;padding:4px 8px;font-size:10px;font-weight:800}.status.confirmed{background:#e6f5ed;color:#13744d}.status.pending{background:#fff3d9;color:#93610c}.status.cancelled{background:#ffeded;color:#b53c3c}.empty{text-align:center;color:var(--muted);padding:28px}.muted{color:var(--muted)}.notice{padding:12px 14px;border:1px solid #efdfb8;background:#fff9ec;color:#76571b;border-radius:10px;font-size:12px;margin:16px 0}.modal{display:none;position:fixed;inset:0;background:#0d1424a8;z-index:10;align-items:center;justify-content:center;padding:15px}.modal.show{display:flex}.dialog{background:white;border-radius:15px;padding:21px;width:min(720px,100%);max-height:92vh;overflow:auto;box-shadow:0 20px 60px #0003}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.dialog-head h2{margin:0;font-size:18px}.close{border:0;border-radius:8px;background:#edf0f5;padding:6px 10px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:10px}.calendar-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.weekday{text-align:center;color:var(--muted);font-size:11px;padding:5px}.day{min-height:76px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px;font-size:12px}.day.muted-day{opacity:.35}.day.today{border-color:var(--gold)}.day .event{display:block;background:#f5ebd5;color:#71531b;border-radius:4px;padding:3px;margin-top:5px;font-size:10px;overflow:hidden;text-overflow:ellipsis}.day.booked{background:#fffbf2}.reportline{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.reportline:last-child{border:0}.install-tip{font-size:12px;color:#d8deea}.mobile-nav{display:none}
+@media(max-width:850px){.shell{display:block}aside{display:none}main{padding:17px 13px 85px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card{padding:13px}.metric{font-size:21px}.split{grid-template-columns:1fr}.topbar{padding:12px 14px}.brand{font-size:15px}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--navy);z-index:5;justify-content:space-around;padding:7px 4px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -3px 16px #0002}.mobile-nav button{border:0;background:transparent;color:#cbd3e0;font-size:10px;padding:6px 4px;display:flex;flex-direction:column;align-items:center;gap:3px}.mobile-nav button.active{color:#e3c783}.mobile-nav b{font-size:17px}.heading h1{font-size:22px}.day{min-height:62px;padding:4px;font-size:10px}.day .event{font-size:9px}.top-actions .install{display:none}}
+@media(max-width:430px){.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.top-actions button{padding:7px 8px}.metric{font-size:19px}.calendar{gap:3px}.day{min-height:54px}.day .event{padding:2px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">LIFE QILLA PLUS MARQUE<small>BOOKING & MANAGEMENT</small></div>
+  <div class="top-actions"><span class="install-tip" id="installStatus">Owner dashboard</span><button class="install" id="installBtn" hidden>Install App</button><button id="backupBtn">Backup</button></div>
+</header>
+<div class="shell">
+<aside>
+  <button class="nav active" data-page="dashboard">▦ &nbsp; Dashboard</button>
+  <button class="nav" data-page="bookings">▤ &nbsp; Bookings</button>
+  <button class="nav" data-page="calendar">▦ &nbsp; Calendar</button>
+  <button class="nav" data-page="customers">♙ &nbsp; Customers</button>
+  <button class="nav" data-page="payments">₨ &nbsp; Payments</button>
+  <button class="nav" data-page="reports">▥ &nbsp; Reports</button>
+  <button class="nav" data-page="settings">⚙ &nbsp; Settings & Data</button>
+</aside>
+<main>
+<section class="page active" id="dashboard">
+  <div class="heading"><div><h1>Dashboard</h1><p>Welcome to your marque management overview.</p></div><button class="btn gold" id="newBooking1">+ New Booking</button></div>
+  <div class="cards">
+    <div class="card"><div class="metric-label">Total Bookings</div><div class="metric" id="mBookings">0</div><div class="metric-note">All saved bookings</div></div>
+    <div class="card"><div class="metric-label">Upcoming Events</div><div class="metric" id="mUpcoming">0</div><div class="metric-note">From today onwards</div></div>
+    <div class="card"><div class="metric-label">Total Received</div><div class="metric" id="mReceived">Rs 0</div><div class="metric-note">Advance and other payments</div></div>
+    <div class="card"><div class="metric-label">Remaining Balance</div><div class="metric" id="mRemaining">Rs 0</div><div class="metric-note">On active bookings</div></div>
+  </div>
+  <div class="split">
+    <div class="panel"><h2>Upcoming Events</h2><div id="upcomingTable"></div></div>
+    <div class="panel"><h2>Payment Summary</h2><div class="reportline"><span>Total Hall Charges</span><strong id="sTotal">Rs 0</strong></div><div class="reportline"><span>Received</span><strong id="sReceived">Rs 0</strong></div><div class="reportline"><span>Outstanding</span><strong id="sDue">Rs 0</strong></div><div class="notice">Your records are saved in this browser on this device. Use Backup regularly to keep a copy.</div></div>
+  </div>
+</section>
+<section class="page" id="bookings">
+  <div class="heading"><div><h1>Bookings</h1><p>Add and manage all events at Life Qilla Plus Marque.</p></div><button class="btn gold" id="newBooking2">+ New Booking</button></div>
+  <div class="toolbar"><input class="search" id="bookingSearch" placeholder="Search customer, phone or event..."><div class="tools"><select id="bookingFilter" style="width:auto"><option value="all">All statuses</option><option>Confirmed</option><option>Pending</option><option>Cancelled</option></select><button class="btn soft" id="exportBookings">Export CSV</button></div></div>
+  <div class="table-wrap" id="bookingTable"></div>
+</section>
+<section class="page" id="calendar">
+  <div class="heading"><div><h1>Booking Calendar</h1><p>Check booked and available event dates.</p></div><button class="btn gold" id="newBooking3">+ New Booking</button></div>
+  <div class="panel"><div class="calendar-head"><button class="btn soft" id="prevMonth">←</button><h2 id="monthLabel" style="margin:0"></h2><button class="btn soft" id="nextMonth">→</button></div><div class="calendar" id="calendarGrid"></div></div>
+</section>
+<section class="page" id="customers">
+  <div class="heading"><div><h1>Customers</h1><p>Customer details from your saved bookings.</p></div></div>
+  <div class="toolbar"><input class="search" id="customerSearch" placeholder="Search customer or phone..."></div><div class="table-wrap" id="customerTable"></div>
+</section>
+<section class="page" id="payments">
+  <div class="heading"><div><h1>Payments</h1><p>Track advances, received amounts and remaining balances.</p></div></div>
+  <div class="cards">
+    <div class="card"><div class="metric-label">Total Charges</div><div class="metric" id="pCharges">Rs 0</div></div>
+    <div class="card"><div class="metric-label">Total Received</div><div class="metric" id="pReceived">Rs 0</div></div>
+    <div class="card"><div class="metric-label">Total Due</div><div class="metric" id="pDue">Rs 0</div></div>
+    <div class="card"><div class="metric-label">Fully Paid Events</div><div class="metric" id="pPaid">0</div></div>
+  </div>
+  <div class="table-wrap" id="paymentTable"></div>
+</section>
+<section class="page" id="reports">
+  <div class="heading"><div><h1>Reports</h1><p>Income and booking overview.</p></div><button class="btn soft" id="exportReport">Download Report CSV</button></div>
+  <div class="cards">
+    <div class="card"><div class="metric-label">This Month Bookings</div><div class="metric" id="rBookings">0</div></div>
+    <div class="card"><div class="metric-label">This Month Received</div><div class="metric" id="rReceived">Rs 0</div></div>
+    <div class="card"><div class="metric-label">This Month Due</div><div class="metric" id="rDue">Rs 0</div></div>
+    <div class="card"><div class="metric-label">Cancelled Bookings</div><div class="metric" id="rCancelled">0</div></div>
+  </div>
+  <div class="panel"><h2>Overall Financial Summary</h2><div id="reportSummary"></div></div>
+</section>
+<section class="page" id="settings">
+  <div class="heading"><div><h1>Settings & Data</h1><p>Manage your hall details and protect your records.</p></div></div>
+  <div class="panel" style="max-width:700px"><h2>Hall Information</h2><div class="field"><label>Hall Name</label><input id="hallName" value="Life Qilla Plus Marque"></div><div class="field"><label>Owner / Contact Number (optional)</label><input id="hallPhone" placeholder="03xx-xxxxxxx"></div><button class="btn gold" id="saveSettings">Save Details</button><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><h2>Backup & Restore</h2><p class="muted" style="font-size:12px">Download a backup file to keep your bookings safe. To restore, choose a backup JSON file created by this app.</p><div class="tools"><button class="btn" id="backupBtn2">Download Backup</button><label class="btn soft" style="display:inline-flex;align-items:center;cursor:pointer">Restore Backup<input type="file" id="restoreFile" accept=".json,application/json" hidden></label></div><div class="notice">Important: This first version stores data on this device/browser only. It does not automatically sync to another phone or computer. Do not clear browser data unless you have a backup.</div></div>
+</section>
+</main>
+</div>
+<nav class="mobile-nav">
+<button class="active" data-page="dashboard"><b>▦</b>Home</button><button data-page="bookings"><b>▤</b>Bookings</button><button data-page="calendar"><b>▦</b>Calendar</button><button data-page="payments"><b>₨</b>Payments</button><button data-page="settings"><b>⚙</b>Settings</button>
+</nav>
+<div class="modal" id="bookingModal"><div class="dialog"><div class="dialog-head"><h2 id="modalTitle">New Booking</h2><button class="close" id="closeModal">✕</button></div>
+<form id="bookingForm"><input type="hidden" id="editId"><div class="formgrid">
+<div class="field"><label>Customer Name *</label><input id="customerName" required placeholder="Full name"></div>
+<div class="field"><label>Mobile Number *</label><input id="customerPhone" required inputmode="tel" placeholder="03xx-xxxxxxx"></div>
+<div class="field"><label>Event Type *</label><select id="eventType" required><option value="">Select event</option><option>Wedding</option><option>Mehndi</option><option>Barat</option><option>Walima</option><option>Engagement</option><option>Birthday</option><option>Other</option></select></div>
+<div class="field"><label>Event Date *</label><input type="date" id="eventDate" required></div>
+<div class="field"><label>Start Time</label><input type="time" id="eventTime"></div>
+<div class="field"><label>Guest Quantity</label><input type="number" id="guests" min="0" placeholder="e.g. 500"></div>
+<div class="field"><label>Total Hall Charges (PKR) *</label><input type="number" id="totalAmount" min="0" step="1" required placeholder="0"></div>
+<div class="field"><label>Advance / Amount Received (PKR)</label><input type="number" id="receivedAmount" min="0" step="1" value="0"></div>
+<div class="field"><label>Booking Status</label><select id="bookingStatus"><option>Confirmed</option><option>Pending</option><option>Cancelled</option></select></div>
+<div class="field"><label>Payment Method</label><select id="paymentMethod"><option>Cash</option><option>Bank Transfer</option><option>Online</option><option>Other</option></select></div>
+<div class="field full"><label>Notes</label><textarea id="notes" placeholder="Menu, decoration, terms or other details"></textarea></div>
+</div><div class="dialog-actions"><button type="button" class="btn soft" id="cancelModal">Cancel</button><button type="submit" class="btn gold">Save Booking</button></div></form></div></div>
+<div class="modal" id="paymentModal"><div class="dialog" style="max-width:430px"><div class="dialog-head"><h2>Add Payment</h2><button class="close" id="closePayment">✕</button></div><form id="paymentForm"><input type="hidden" id="paymentBookingId"><div class="field"><label>Customer / Event</label><input id="paymentCustomer" disabled></div><div class="field"><label>Amount Received (PKR) *</label><input id="paymentAmount" type="number" min="1" required></div><div class="field"><label>Payment Method</label><select id="paymentMethodNew"><option>Cash</option><option>Bank Transfer</option><option>Online</option><option>Other</option></select></div><div class="field"><label>Payment Note</label><input id="paymentNote" placeholder="e.g. Second installment"></div><div class="dialog-actions"><button type="button" class="btn soft" id="cancelPayment">Cancel</button><button class="btn gold">Save Payment</button></div></form></div></div>
+<div class="modal" id="detailModal"><div class="dialog"><div class="dialog-head"><h2>Booking Details</h2><button class="close" id="closeDetail">✕</button></div><div id="detailContent"></div></div></div>
+<script>
+const $=id=>document.getElementById(id), money=n=>'Rs '+Number(n||0).toLocaleString('en-PK'), today=()=>new Date().toISOString().slice(0,10);
+let data=JSON.parse(localStorage.getItem('lqpm_data')||'{"bookings":[],"hall":{"name":"Life Qilla Plus Marque","phone":""}}');
+if(!Array.isArray(data.bookings))data.bookings=[];
+let currentMonth=new Date();let installPrompt=null;
+const save=()=>localStorage.setItem('lqpm_data',JSON.stringify(data));
+const active=b=>b.status!=='Cancelled';
+const received=b=>(b.payments||[]).reduce((s,p)=>s+Number(p.amount||0),0)+Number(b.initialReceived||0);
+const due=b=>Math.max(0,Number(b.total||0)-received(b));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('[data-page]').forEach(x=>x.classList.toggle('active',x.dataset.page===id));render();window.scrollTo(0,0)}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function openBooking(b=null){$('bookingForm').reset();$('editId').value=b?.id||'';$('modalTitle').textContent=b?'Edit Booking':'New Booking';$('receivedAmount').value=b?0:0;
+if(b){$('customerName').value=b.name;$('customerPhone').value=b.phone;$('eventType').value=b.type;$('eventDate').value=b.date;$('eventTime').value=b.time||'';$('guests').value=b.guests||'';$('totalAmount').value=b.total;$('bookingStatus').value=b.status;$('paymentMethod').value=b.method||'Cash';$('notes').value=b.notes||'';$('receivedAmount').value=0}
+$('bookingModal').classList.add('show')}
+function closeBooking(){$('bookingModal').classList.remove('show')}
+['newBooking1','newBooking2','newBooking3'].forEach(id=>$(id).onclick=()=>openBooking());
+['closeModal','cancelModal'].forEach(id=>$(id).onclick=closeBooking);
+$('bookingForm').onsubmit=e=>{e.preventDefault();let id=$('editId').value,date=$('eventDate').value,status=$('bookingStatus').value;let clash=data.bookings.find(b=>b.date===date&&b.status!=='Cancelled'&&b.id!==id);
+if(clash&&status!=='Cancelled'){alert('This date is already booked by '+clash.name+'. Please check the calendar.');return}
+let old=data.bookings.find(b=>b.id===id),initial=Number($('receivedAmount').value||0),total=Number($('totalAmount').value||0);
+if(initial>total){alert('Received amount cannot be greater than total charges.');return}
+let obj={id:id||String(Date.now()),name:$('customerName').value.trim(),phone:$('customerPhone').value.trim(),type:$('eventType').value,date,time:$('eventTime').value,guests:Number($('guests').value||0),total,status,method:$('paymentMethod').value,notes:$('notes').value.trim(),initialReceived:old?(old.initialReceived||0)+initial:initial,payments:old?(old.payments||[]):[]};
+if(old)data.bookings=data.bookings.map(x=>x.id===id?obj:x);else data.bookings.push(obj);save();closeBooking();render();showPage('bookings')};
+function openPayment(id){let b=data.bookings.find(x=>x.id===id);if(!b)return;$('paymentBookingId').value=id;$('paymentCustomer').value=b.name+' — '+b.type+' ('+b.date+')';$('paymentAmount').value='';$('paymentNote').value='';$('paymentModal').classList.add('show')}
+['closePayment','cancelPayment'].forEach(id=>$(id).onclick=()=>$('paymentModal').classList.remove('show'));
+$('paymentForm').onsubmit=e=>{e.preventDefault();let b=data.bookings.find(x=>x.id===$('paymentBookingId').value),amt=Number($('paymentAmount').value);if(!b||amt<=0)return;if(received(b)+amt>b.total){alert('Payment is more than the remaining balance.');return}b.payments=b.payments||[];b.payments.push({amount:amt,method:$('paymentMethodNew').value,note:$('paymentNote').value.trim(),date:today()});save();$('paymentModal').classList.remove('show');render()};
+function statusBadge(s){return `<span class="status ${s.toLowerCase()}">${esc(s)}</span>`}
+function actions(b){return `<button class="btn small soft" onclick="viewBooking('${b.id}')">View</button> <button class="btn small soft" onclick="editBooking('${b.id}')">Edit</button> <button class="btn small green" onclick="openPayment('${b.id}')">Payment</button> <button class="btn small red" onclick="deleteBooking('${b.id}')">Delete</button>`}
+window.editBooking=id=>{let b=data.bookings.find(x=>x.id===id);if(b)openBooking(b)};
+window.viewBooking=id=>{let b=data.bookings.find(x=>x.id===id);if(!b)return;$('detailContent').innerHTML=`<div class="formgrid"><div class="field"><label>Customer</label><strong>${esc(b.name)}</strong></div><div class="field"><label>Phone</label><strong>${esc(b.phone)}</strong></div><div class="field"><label>Event</label><strong>${esc(b.type)}</strong></div><div class="field"><label>Date & Time</label><strong>${esc(b.date)} ${esc(b.time||'')}</strong></div><div class="field"><label>Guests</label><strong>${b.guests||'—'}</strong></div><div class="field"><label>Status</label>${statusBadge(b.status)}</div><div class="field"><label>Total Charges</label><strong>${money(b.total)}</strong></div><div class="field"><label>Received</label><strong>${money(received(b))}</strong></div><div class="field"><label>Remaining</label><strong>${money(due(b))}</strong></div><div class="field full"><label>Notes</label>${esc(b.notes||'—')}</div></div><h3 style="font-size:14px">Payment History</h3>${(b.payments||[]).map(p=>`<div class="reportline"><span>${esc(p.date)} · ${esc(p.method)} ${esc(p.note)}</span><strong>${money(p.amount)}</strong></div>`).join('')||'<p class="muted">No additional payments recorded.</p>'}`;$('detailModal').classList.add('show')};
+$('closeDetail').onclick=()=>$('detailModal').classList.remove('show');
+window.deleteBooking=id=>{let b=data.bookings.find(x=>x.id===id);if(b&&confirm('Delete booking for '+b.name+'? This cannot be undone.')){data.bookings=data.bookings.filter(x=>x.id!==id);save();render()}};
+function table(headers,rows){if(!rows.length)return '<div class="empty">No records found.</div>';return `<div class="table-wrap"><table><thead><tr>${headers.map(h=>'<th>'+h+'</th>').join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`}
+function renderBookings(){let q=($('bookingSearch').value||'').toLowerCase(),f=$('bookingFilter').value;let arr=[...data.bookings].filter(b=>(f==='all'||b.status===f)&&(b.name+' '+b.phone+' '+b.type).toLowerCase().includes(q)).sort((a,b)=>a.date.localeCompare(b.date));$('bookingTable').innerHTML=table(['Date','Customer','Phone','Event','Total','Received','Balance','Status','Actions'],arr.map(b=>`<tr><td>${esc(b.date)}</td><td><strong>${esc(b.name)}</strong></td><td>${esc(b.phone)}</td><td>${esc(b.type)}</td><td>${money(b.total)}</td><td>${money(received(b))}</td><td>${money(due(b))}</td><td>${statusBadge(b.status)}</td><td>${actions(b)}</td></tr>`))}
+function renderCustomers(){let q=($('customerSearch').value||'').toLowerCase(),map=new Map();data.bookings.forEach(b=>{let k=b.phone||b.name;if(!map.has(k))map.set(k,{name:b.name,phone:b.phone,count:0,total:0,received:0});let c=map.get(k);c.count++;c.total+=b.total;c.received+=received(b)});let arr=[...map.values()].filter(c=>(c.name+' '+c.phone).toLowerCase().includes(q));$('customerTable').innerHTML=table(['Customer','Phone','Bookings','Total Charges','Received','Balance'],arr.map(c=>`<tr><td><strong>${esc(c.name)}</strong></td><td>${esc(c.phone)}</td><td>${c.count}</td><td>${money(c.total)}</td><td>${money(c.received)}</td><td>${money(c.total-c.received)}</td></tr>`))}
+function renderPayments(){let activeList=data.bookings.filter(b=>b.status!=='Cancelled'),charges=activeList.reduce((s,b)=>s+b.total,0),got=activeList.reduce((s,b)=>s+received(b),0);$('pCharges').textContent=money(charges);$('pReceived').textContent=money(got);$('pDue').textContent=money(charges-got);$('pPaid').textContent=activeList.filter(b=>due(b)===0).length;$('paymentTable').innerHTML=table(['Event Date','Customer','Event','Total','Received','Remaining','Action'],activeList.sort((a,b)=>a.date.localeCompare(b.date)).map(b=>`<tr><td>${esc(b.date)}</td><td>${esc(b.name)}</td><td>${esc(b.type)}</td><td>${money(b.total)}</td><td>${money(received(b))}</td><td>${money(due(b))}</td><td><button class="btn small green" onclick="openPayment('${b.id}')">Add Payment</button></td></tr>`))}
+function renderDashboard(){let activeList=data.bookings.filter(active),future=activeList.filter(b=>b.date>=today()).sort((a,b)=>a.date.localeCompare(b.date)),got=activeList.reduce((s,b)=>s+received(b),0),charges=activeList.reduce((s,b)=>s+b.total,0);$('mBookings').textContent=data.bookings.length;$('mUpcoming').textContent=future.length;$('mReceived').textContent=money(got);$('mRemaining').textContent=money(charges-got);$('sTotal').textContent=money(charges);$('sReceived').textContent=money(got);$('sDue').textContent=money(charges-got);$('upcomingTable').innerHTML=future.length?table(['Date','Customer','Event','Status'],future.slice(0,6).map(b=>`<tr><td>${esc(b.date)}</td><td>${esc(b.name)}</td><td>${esc(b.type)}</td><td>${statusBadge(b.status)}</td></tr>`)):'<div class="empty">No upcoming events yet.</div>'}
+function renderReports(){let month=today().slice(0,7),arr=data.bookings.filter(b=>b.date.startsWith(month)),activeArr=arr.filter(active);$('rBookings').textContent=arr.length;$('rReceived').textContent=money(activeArr.reduce((s,b)=>s+received(b),0));$('rDue').textContent=money(activeArr.reduce((s,b)=>s+due(b),0));$('rCancelled').textContent=arr.filter(b=>b.status==='Cancelled').length;let all=data.bookings.filter(active);$('reportSummary').innerHTML=[['Total active bookings',all.length],['Total hall charges',money(all.reduce((s,b)=>s+b.total,0))],['Total received',money(all.reduce((s,b)=>s+received(b),0))],['Total outstanding',money(all.reduce((s,b)=>s+due(b),0))],['Cancelled bookings',data.bookings.filter(b=>b.status==='Cancelled').length]].map(x=>`<div class="reportline"><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('')}
+function renderCalendar(){let y=currentMonth.getFullYear(),m=currentMonth.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);$('monthLabel').textContent=first.toLocaleDateString('en-PK',{month:'long',year:'numeric'});let days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];let html=days.map(d=>`<div class="weekday">${d}</div>`).join('');for(let i=0;i<first.getDay();i++)html+=`<div class="day muted-day"></div>`;for(let d=1;d<=last.getDate();d++){let date=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`,events=data.bookings.filter(b=>b.date===date&&b.status!=='Cancelled');html+=`<div class="day ${date===today()?'today':''} ${events.length?'booked':''}"><strong>${d}</strong>${events.map(b=>`<span class="event" title="${esc(b.name)}">${esc(b.type)} · ${esc(b.name)}</span>`).join('')}</div>`} $('calendarGrid').innerHTML=html}
+function render(){renderDashboard();renderBookings();renderCustomers();renderPayments();renderReports();renderCalendar();$('hallName').value=data.hall?.name||'Life Qilla Plus Marque';$('hallPhone').value=data.hall?.phone||''}
+$('bookingSearch').oninput=renderBookings;$('bookingFilter').onchange=renderBookings;$('customerSearch').oninput=renderCustomers;$('prevMonth').onclick=()=>{currentMonth.setMonth(currentMonth.getMonth()-1);renderCalendar()};$('nextMonth').onclick=()=>{currentMonth.setMonth(currentMonth.getMonth()+1);renderCalendar()};
+function csvDownload(filename,rows){let csv=rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));a.download=filename;a.click();URL.revokeObjectURL(a.href)}
+function bookingRows(){return [['Date','Customer','Phone','Event','Guests','Total PKR','Received PKR','Balance PKR','Status','Notes'],...data.bookings.map(b=>[b.date,b.name,b.phone,b.type,b.guests,b.total,received(b),due(b),b.status,b.notes])]}
+$('exportBookings').onclick=()=>csvDownload('life-qilla-bookings.csv',bookingRows());$('exportReport').onclick=()=>csvDownload('life-qilla-report.csv',bookingRows());
+function backup(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='life-qilla-backup-'+today()+'.json';a.click();URL.revokeObjectURL(a.href)}
+$('backupBtn').onclick=backup;$('backupBtn2').onclick=backup;
+$('restoreFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(!Array.isArray(d.bookings))throw Error();if(confirm('Restore backup? Current records on this device will be replaced.')){data=d;save();render();alert('Backup restored successfully.')}}catch(_){alert('Invalid backup file.')}e.target.value=''};
+$('saveSettings').onclick=()=>{data.hall=data.hall||{};data.hall.name=$('hallName').value.trim()||'Life Qilla Plus Marque';data.hall.phone=$('hallPhone').value.trim();save();alert('Hall details saved.')};
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('installBtn').hidden=false;$('installStatus').textContent='Install this app on your phone'});$('installBtn').onclick=async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$('installBtn').hidden=true};
+render();
+</script>
+</body></html>
